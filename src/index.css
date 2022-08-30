@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  list-style: none;
+}
+
+:root {
+  /**** Colors ****/
+  /* Shared */
+  --color-blue: #0079ff;
+
+  /* Light Mode */
+  --color-dark-grey: #697c9a;
+  --color-greyish-blue: #4b6a9b;
+  --color-black-light: #2b3442;
+  --color-light-grey: #eaecf7;
+  --color-off-white: #fefefe;
+
+  /* Dark Mode */
+  --color-white: #ffffff;
+  --color-black-dark: #141d2f;
+  --color-lighter-black-dark: #1e2a47;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-light-grey);
+  transition: 0.25s;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 52%;
+  min-width: 685px;
+  max-width: 685px;
+  transition: 0.25s;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  #root {
+    width: 55%;
+    min-width: 550px;
+    font-size: 115%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 570px) {
+  #root {
+    width: 95%;
+    min-width: 270px;
+    font-size: 115%;
+  }
+}
+
+/* Dark Mode  */
+.darkModeBody {
+  background-color: var(--color-black-dark);
+  color: var(--color-white);
+}

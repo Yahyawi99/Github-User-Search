@@ -1,0 +1,288 @@
+/* Container */
+.container {
+  background-color: var(--color-white);
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  margin-bottom: 25px;
+}
+
+/* Header */
+.header {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.header .userImage {
+  width: 100%;
+}
+
+.header .userImage img {
+  width: 85%;
+  border-radius: 50%;
+}
+
+/* Info */
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.descContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description .descContainer .info .name {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.description .descContainer .info a {
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.description .descContainer .info a:visited {
+  color: blue;
+}
+
+.description .descContainer .date,
+.description .bio {
+  color: var(--color-dark-grey);
+}
+
+.description .bio {
+  font-size: 1.3rem;
+}
+
+.second-bio {
+  display: none;
+  color: var(--color-dark-grey);
+  font-size: 1.3rem;
+}
+
+/* Followers */
+.followers {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: var(--color-light-grey);
+  border-radius: 10px;
+  padding: 20px 0px;
+  margin: 30px 0px 40px 180px;
+}
+
+.followers h3 {
+  color: var(--color-dark-grey);
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
+
+.followers p {
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+/* Links */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 180px;
+  gap: 50px;
+}
+
+.links ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.links ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.links ul li h3,
+.links ul li a {
+  color: var(--color-lighter-black-dark);
+  font-weight: lighter;
+}
+
+.links ul li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* media query */
+@media screen and (max-width: 800px) {
+
+  /* Container */
+  .container {
+    padding-left: 40px;
+    margin-bottom: 25px;
+  }
+
+  /* Header */
+  .header {
+    gap: 15px;
+    row-gap: 10px;
+  }
+
+  .header .userImage img {
+    width: 90%;
+  }
+
+  .description .descContainer .info .name {
+    font-size: 1.75rem;
+  }
+
+  .descContainer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .description .bio {
+    display: none;
+  }
+
+  .second-bio {
+    display: flex;
+    grid-column: 1 / -1;
+    line-height: 20px;
+  }
+
+  /* Followers */
+  .followers {
+    justify-content: space-evenly;
+    text-align: justify;
+    margin: 30px 0px 40px 0px;
+  }
+
+  /* Links */
+  .links {
+    margin-left: 0px;
+    gap: 70px;
+  }
+
+  .links ul li {
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  .links ul li h3,
+  .links ul li p,
+  .links ul li a {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 570px) {
+
+  /* Container */
+  .container {
+    background-color: var(--color-white);
+    padding: 20px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    padding-right: 5px;
+  }
+
+  /* Header */
+  .header {
+    grid-template-columns: 120px 1fr;
+    gap: 20px;
+  }
+
+  .header .userImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .description .descContainer .info .name {
+    font-size: 1.5rem;
+  }
+
+  .second-bio {
+    margin-top: 20px;
+    font-size: 1.25rem;
+    padding-left: 5px;
+  }
+
+  .description .descContainer .date {
+    font-size: 1rem;
+  }
+
+  /* Followers */
+  .followers {
+    width: 95%;
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .followers h3 {
+    font-size: 1rem;
+  }
+
+  /* Links */
+  .links {
+    flex-direction: column;
+    margin-left: 0px;
+    gap: 0px;
+  }
+
+  .links ul li {
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .links ul li h3,
+  .links ul li p,
+  .links ul li a {
+    font-size: 1.3rem !important;
+  }
+}
+
+/**************/
+/* DarkMode */
+/*************/
+/* Container */
+.darkContainer {
+  background-color: var(--color-lighter-black-dark);
+}
+
+/* Header */
+.darkModeHeader .description .descContainer .info .name {
+  color: var(--color-white);
+}
+
+.darkModeHeader .description .descContainer .date,
+.darkModeHeader .description .bio {
+  color: var(--color-light-grey);
+}
+
+/* Followers */
+.darkFollowers {
+  background-color: var(--color-black-dark);
+}
+
+.darkFollowers h3,
+.darkFollowers p {
+  color: var(--color-white);
+}
+
+/* Links */
+.Darklinks ul li h3,
+.Darklinks ul li a,
+.Darklinks ul li p {
+  color: var(--color-white);
+}

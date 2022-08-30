@@ -1,0 +1,41 @@
+/* Header StyleSheet */
+
+header {
+  justify-content: space-between;
+  display: flex;
+  padding: 15px 0px 0px 0px;
+  font-size: 125%;
+  margin-bottom: 50px;
+}
+header h1 {
+  cursor: pointer;
+}
+header .modeContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--color-dark-grey);
+  cursor: pointer;
+}
+
+/* ************* */
+/* Media query */
+/* ************* */
+@media screen and (min-width: 0px) and (max-width: 570px) {
+  header {
+    font-size: 100%;
+  }
+  header .modeContainer {
+    gap: 5px;
+  }
+}
+
+/* ************** */
+/* Dark Mode */
+/* ************** */
+/* Header Dark mode */
+.darkModeHedader h1,
+.darkModeHedader .modeContainer {
+  color: var(--color-white);
+}
